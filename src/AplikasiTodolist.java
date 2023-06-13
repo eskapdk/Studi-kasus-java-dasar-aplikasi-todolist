@@ -1,8 +1,9 @@
 public class AplikasiTodolist {
     
     public static String[] data = new String[10];
+    public static java.util.Scanner scanner = new java.util.Scanner(System.in);
     public static void main(String[] args) {
-        testHapusTodoList();
+        testinput();
     }
 
     /**
@@ -106,8 +107,21 @@ public class AplikasiTodolist {
         System.out.println(hasil);
 
         tampilTodoList();
-
     }
+
+    public static String input(String info) {
+        System.out.print(info+" : ");
+        String input = scanner.nextLine();
+        return input;
+    }
+
+    public static void testinput() {
+        var name = input("Nama");
+        System.out.println("Hallo "+name);
+        var alamat = input("Alamat");
+        System.out.println("Alamat "+alamat);
+    }
+
 
     /**
      * tampilan menampilkan todolist
